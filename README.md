@@ -94,32 +94,5 @@ Use these, together with the Domain Study Guide, to target remaining study time 
 
 All 140 questions, rationales, and instructor misconception notes in this tool were written from scratch to test the objectives published in CompTIA's official *Tech+ FC0-U71 Certification Exam Objectives (Version 2.0)* document. None of the content reproduces or paraphrases actual CompTIA exam questions ("brain dumps"), consistent with CompTIA's Authorized Materials Use Policy.
 
----
 
-## For the Instructor
-
-The exam is a single self-contained HTML file (`fc0u71_full_practice_exam.html`) with zero external dependencies. All questions, rationale, the domain study guide content, and grading logic are bundled inline — no server, no database, no CDN calls required. GitHub Pages serves it as a static file.
-
-To add or edit **practice questions**, the question bank lives in six arrays near the top of the `<script>` block (`ITC`, `INFRA`, `APPS`, `DEV`, `DATA`, `SEC`), each holding exactly 50 objects with this schema:
-
-```js
-{
-  "comp": "SEC",                 // domain short code — matches DOMAIN_META keys
-  "topic": "Password Best Practices",
-  "type": "mc",
-  "stem": "Question text...",
-  "opts": ["Option A", "Option B", "Option C", "Option D"],
-  "ans": 1,                      // zero-indexed correct answer
-  "rationale": "HTML string explaining the correct answer",
-  "misconception": "Instructor note on the common wrong-answer pattern",
-  "diff": "found | inter | adv"
-}
-```
-
-To edit the **Domain Study Guide**, look for the `STUDY_GUIDE` object, keyed by the same six domain codes. Each domain holds a `label`, a `weight` (its real-exam percentage), and a `subs` array of sub-objective entries (`id`, `title`, `body`) rendered as expandable accordion cards.
-
-Push changes to the `main` branch and GitHub Pages rebuilds automatically within 1–2 minutes.
-
----
-
-*CompTIA Tech+ (FC0-U71) · Practice exam prepared by Dr. Mario Booker*
+*CompTIA Tech+ (FC0-U71) · Practice exam prepared by Dr. Mario DeSean Booker*
